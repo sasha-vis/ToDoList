@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body, #app {
+    height: 100%;
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo {
+    margin: auto;
+    width: 25%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px #999;
+}
+
+.todo_title {
+    padding: 30px;
+    text-align: center;
+    background-color: #369;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.todo_tasks {
+    background-color: #ededed;
+    padding-top: 20px;
+}
+
+.todo_tasks input {
+    padding: 10px;
+    width: calc(100% - 62px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.todo_tasks_list {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.todo_tasks_list li {
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(17, 55, 94);
+    display: flex;
+    align-items: center;
+}
+
+.todo_tasks_list li::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #ccc;
+    margin-right: 40px;
+    flex: none;
+}
+
+.todo_tasks_list li.complete {
+    position: relative;
+}
+
+.todo_tasks_list li.complete::before {
+    background-color: rgb(148, 187, 150);
+}
+
+.todo_tasks_list li.complete::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: rgb(48, 133, 69);
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    border-radius: 2px;
+    top: calc(50% - 10px);
+}
+
+.todo_tasks_list .delete_btn {
+    /* margin-left: auto; */
+    border: 1px solid #ccc;
+    padding: 7px 10px;
+    cursor: pointer;
+    background-color: rgb(172, 73, 73);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.todo_tasks_list .edit_btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(206, 207, 104);
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.todo_tasks_list input {
+    border: 0;
+    background-color: #ededed;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(17, 55, 94);
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.todo_tasks .clear_all_btn {
+    margin: 0 auto;
+    background-color: rgb(91, 24, 97);
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+}
